@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Studio</title>
+<style>
+  :root{--ink:#1b2430;--paper:#f7f9fb;--blue:#1f4fd8;--teal:#12a594;--sun:#ffb703;--line:#d9e0e8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+  .bar{max-width:1060px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;flex-wrap:wrap;gap:8px}
+  .logo{font-weight:800;font-size:1.3rem;color:var(--blue)}
+  .logo span{color:var(--sun)}
+  nav button{background:none;border:0;font:inherit;padding:8px 14px;border-radius:6px;cursor:pointer;color:var(--ink)}
+  nav button:hover,nav button.on{background:var(--blue);color:#fff}
+  nav button:focus-visible,.btn:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+  .page{display:none}.page.on{display:block}
+  .hero{background:linear-gradient(120deg,#1f4fd8 0%,#12a594 100%);color:#fff;text-align:center;padding:90px 20px}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.8rem);letter-spacing:-1px}
+  .hero h2{font-weight:400;font-size:clamp(1.1rem,3vw,1.6rem);margin:12px 0}
+  .hero p{max-width:620px;margin:0 auto 18px}
+  .tags{font-size:.95rem;opacity:.9;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--sun);color:#1b2430;font-weight:700;text-decoration:none;border:0;padding:14px 30px;border-radius:30px;cursor:pointer;font-size:1rem}
+  .btn:hover{filter:brightness(.95)}
+  section,.wrap{max-width:1060px;margin:auto;padding:56px 20px}
+  h3.t{font-size:1.8rem;text-align:center;margin-bottom:30px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px}
+  .card .ic{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:1.9rem;margin-bottom:14px}
+  .card h4{font-size:1.2rem;margin-bottom:6px}
+  .c1 .ic{background:#dfe8ff}.c2 .ic{background:#d6f5ef}.c3 .ic{background:#fff0c7}
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px;align-items:center}
+  .pic{background:linear-gradient(135deg,var(--teal),var(--blue));border-radius:16px;min-height:260px;display:grid;place-items:center;font-size:5rem}
+  form{display:grid;gap:14px;max-width:520px}
+  input,textarea{font:inherit;padding:12px;border:1px solid var(--line);border-radius:8px;width:100%}
+  footer{background:var(--ink);color:#cfd8e3;text-align:center;padding:26px 20px;font-size:.9rem}
+  .note{background:#e8f6f3;border-radius:8px;padding:10px 14px;margin-top:12px;display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="logo">Creative<span>Studio</span></div>
+    <nav aria-label="Main">
+      <button data-p="home" class="on">Home</button>
+      <button data-p="about">About Us</button>
+      <button data-p="services">Services</button>
+      <button data-p="contact">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<main id="home" class="page on">
+  <div class="hero">
+    <h1>Creative Studio</h1>
+    <h2>We Build Creative Digital Experiences</h2>
+    <p>We help businesses grow with modern website design, branding and digital solutions.</p>
+    <div class="tags">Creative Design • Website Development • Digital Solutions</div>
+    <button class="btn" data-go="contact">Contact Us</button>
+  </div>
+  <section>
+    <h3 class="t">Our Services</h3>
+    <div class="grid">
+      <div class="card c1"><div class="ic">🌐</div><h4>Web Design</h4><p>Beautiful and responsive websites.</p></div>
+      <div class="card c2"><div class="ic">🎨</div><h4>Graphic Design</h4><p>Creative logos and brand identity.</p></div>
+      <div class="card c3"><div class="ic">📣</div><h4>Digital Marketing</h4><p>Promote your business online.</p></div>
+    </div>
+  </section>
+</main>
+
+<!-- ABOUT -->
+<main id="about" class="page">
+  <section>
+    <h3 class="t">About Us</h3>
+    <div class="two">
+      <div class="pic" aria-hidden="true">🧑‍💻</div>
+      <div>
+        <p>Creative Studio is a small team of designers, developers and marketers who love turning ideas into clear, useful digital products.</p>
+        <br>
+        <p>We work closely with every client to understand their goals, then design and build websites and brands that look great and bring in customers.</p>
+        <br>
+        <p><strong>Our mission:</strong> help businesses grow with modern, honest and creative digital work.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- SERVICES -->
+<main id="services" class="page">
+  <section>
+    <h3 class="t">Services</h3>
+    <div class="grid">
+      <div class="card c1"><div class="ic">🌐</div><h4>Web Design</h4><p>Beautiful and responsive websites that work on every phone, tablet and computer.</p></div>
+      <div class="card c2"><div class="ic">🎨</div><h4>Graphic Design</h4><p>Creative logos and brand identity: colors, fonts and visuals that make you memorable.</p></div>
+      <div class="card c3"><div class="ic">📣</div><h4>Digital Marketing</h4><p>Promote your business online with social media, search and email campaigns.</p></div>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<main id="contact" class="page">
+  <section>
+    <h3 class="t">Contact Us</h3>
+    <div class="two">
+      <div>
+        <p>Have a project in mind? Tell us about it and we will reply within two working days.</p>
+        <br>
+        <p>📧 hello@creativestudio.example</p>
+        <p>📞 +880 1XXX-XXXXXX</p>
+        <p>📍 Dhaka, Bangladesh</p>
+      </div>
+      <div>
+        <form id="f">
+          <input type="text" placeholder="Your name" aria-label="Your name" required>
+          <input type="email" placeholder="Your email" aria-label="Your email" required>
+          <textarea rows="4" placeholder="How can we help?" aria-label="Message" required></textarea>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+        <div class="note" id="n">Thanks! Your message is ready. (Connect this form to email or Google Forms to receive messages.)</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Creative Studio. All rights reserved.</footer>
+
+<script>
+  function show(id){
+    document.querySelectorAll('.page').forEach(function(p){p.classList.toggle('on',p.id===id)});
+    document.querySelectorAll('nav button').forEach(function(b){b.classList.toggle('on',b.dataset.p===id)});
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('nav button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.p)})});
+  document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.go)})});
+  document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('n').style.display='block';e.target.reset()});
+</script>
+</body>
+</html>
